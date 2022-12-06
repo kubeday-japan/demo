@@ -1,0 +1,20 @@
+{
+    "spec":
+    {
+        "ephemeralContainers":
+        [
+            {
+            	"targetContainerName": "app",
+            	"name": "debug-custom-kk",
+            	"image": "lightruncom/koolkits:node",
+            	"command":[ "/bin/sh" ],
+            	"stdin": true, 
+            	"tty": true,
+            	"volumeMounts": [{
+					"mountPath": "/where_you_mount",
+					"name": "your-existing-volume-name"
+				}]
+            }
+        ]
+    }
+}

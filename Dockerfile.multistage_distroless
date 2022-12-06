@@ -1,0 +1,13 @@
+FROM node:18 as builder
+
+WORKDIR /usr/src/app
+COPY app/package*.json ./
+RUN npm install
+COPY app/ .
+
+FROM gcr.io/distroless/nodejs:18
+
+WORKDIR /usr/src/app
+COPY --from=builder /usr/src/app .
+EXPOSE 8080
+CMD [ "node", "server.js" ]

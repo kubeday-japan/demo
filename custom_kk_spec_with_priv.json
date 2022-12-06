@@ -1,0 +1,17 @@
+{
+    "spec":
+    {
+        "ephemeralContainers":
+        [
+            {
+            	"targetContainerName": "app",
+            	"name": "debug-custom-kk",
+            	"image": "lightruncom/koolkits:node",
+            	"command":[ "/bin/sh" ],
+            	"stdin": true, 
+            	"tty": true,
+            	"securityContext": { "privileged": true }
+            }
+        ]
+    }
+}
