@@ -8,6 +8,17 @@ This repo contains the talk demos. Type `make` to get a list of the main demo co
 * `manifest.yaml` - the kubernetes manifest for the `fat`/`slim`/`distroless` versions of the application
 * `Makefile` - helper make targes for the main demo commands and examples
 * `mac` - helper scripts for Mac OS
+* `ecc` - go app to create privileged ephemeral containers
+
+## Creating Custom Ephemeral Container (go app)
+
+Building the app (in `ecc`): `go build -o app`
+
+Running the app: `./app -pod kubeday-demo-657564c8c9-5l4kj -container debug-custom-kk -target app -image lightruncom/koolkits:node`
+
+Note that you'll need to replace the pod name (`kubeday-demo-657564c8c9-5l4kj`) with whatever you have in your current app deployment. You can use the same trick used Makefile to configure `$PNAME`, so you don't have to change the pod name all the time.
+
+If you create the custom ephemeral container using the sample command above you'll be able to reuse `make dbg_attach_custom_kk` to attach to the created container.
 
 ## Debugging Container Images
 
