@@ -2,7 +2,7 @@
 
 Event schedule [link](https://kubedayjapan2022.sched.com/event/1C8kj/secure-and-debuggable-debugging-slim-scratch-and-distroless-kubernetes-containers-saiyam-pathak-civo-limited-kyle-quest-slim-ai)
 
-[Slides](./Secure and Debuggable - Debugging slim, scratch and distroless Kubernetes containers.pdf)
+[Slides](./Secure%20and%20Debuggable%20-%20Debugging%20slim,%20scratch%20and%20distroless%20Kubernetes%20containers.pdf)
 
 
 ## Overview
